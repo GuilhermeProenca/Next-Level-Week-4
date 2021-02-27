@@ -16,7 +16,7 @@ interface challengesContextDate{
     experienceToNextLevel:number;
     activeChallenge:Challenge;
     levelUp:() => void;
-    startNewChallange: () => void;
+    startNewChallenge: () => void;
     resetChallenge:() => void;
     completedChallenge:()=> void;
     closeLevelUpModal:() => void;    
