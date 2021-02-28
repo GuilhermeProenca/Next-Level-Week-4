@@ -1,11 +1,22 @@
 .container {
     height: 100vh;
-    max-width: 992px;
     margin: 0 auto;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 27vw;
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.containerDark {
+    height: 100vh;
+    margin: 0 auto;
+    padding: 2.5rem 27vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1b1c1f;
 }
 
 .container section {
@@ -15,4 +26,62 @@
     grid-template-columns: 1fr 1fr;
     gap: 6.25rem;
     align-content: center;
+}
+
+.containerDark section {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.25rem;
+    align-content: center;
+}
+
+.containerDark div {
+    background-color: #303233;
+}
+
+.containerDark span {
+    color: #d3dbdf;;
+}
+
+.containerDark p {
+    color: #d3dbdf;
+}
+
+.container button img {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    height: 3rem;
+
+}
+
+.containerDark button img {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    height: 3rem;
+}
+
+.container header button {
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+
+    border: 0;
+    background-color: transparent;
+}
+
+.containerDark header button {
+    position: absolute;
+    right: 5rem;
+    top: 2rem;
+
+    border: 0;
+    background-color: transparent;
 }

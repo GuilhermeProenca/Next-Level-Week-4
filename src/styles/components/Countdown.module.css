@@ -81,7 +81,7 @@
     cursor: not-allowed;
 }
 
-.countdownButton img {
+.countdownButton .Check{
     margin-left: 10px;
-    width: 1.3rem;
+   height: 1.3rem;
 }

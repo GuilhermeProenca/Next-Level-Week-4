@@ -8,10 +8,11 @@ import { Profile } from "../components/Profile";
 import { ChallengeBox } from '../components/ChallengeBox';
 
 import styles from '../styles/pages/Home.module.css'
-import React from 'react';
+import React, {useState, useEffect} from 'react'
 
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
+import { DarkThemeContext } from '../contexts/DarkThemeContext';
 
 interface HomeProps {
   level: number;
@@ -20,19 +21,34 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-    return (
+  const [isDark, setDarkTheme] = useState(false)
+  const dark = isDark ? styles.dark : '';
+  
+  useEffect(()=>{
+    setDarkTheme(JSON.parse(localStorage.getItem('darkTheme')) || false)
+  }, [])
+
+  function putDarkTheme() {
+    setDarkTheme(!isDark);
+  }
+
+  useEffect(()=>{
+    localStorage.setItem('darkTheme', JSON.stringify(isDark))
+  }, [isDark])
+
+  return (
+    <DarkThemeContext.Provider value={{isDark, putDarkTheme}}>
       <ChallengesProvider 
           level={props.level} 
           currentExperience={props.currentExperience}
           challengesCompleted={props.challengesCompleted}
         >
-          <div className={styles.container}>    
+          <div className={`${isDark ? styles.containerDark : styles.container} ${isDark}`}>
             <Head>
               <title> Início | move.it </title>
             </Head>
-          
-            <ExperienceBar />
 
+            <ExperienceBar />
             <CountdownProvider>
               <section>
                 <div>
@@ -45,8 +61,12 @@ export default function Home(props: HomeProps) {
                 </div>
             </section>
         </CountdownProvider>
+          <header>
+          <button onClick={putDarkTheme}> {isDark ? <img src="icons/sun.svg" alt="Sun"/> : <img src="icons/moon.svg" alt="Moon"/> } </button>
+          </header>
         </div>
       </ChallengesProvider>
+    </DarkThemeContext.Provider>
   )
 }
 

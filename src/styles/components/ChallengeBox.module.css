@@ -50,7 +50,7 @@
 .challengeActive header{
     color: var(--blue);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     padding: 0 2rem 1.5rem;
     border-bottom: 1px solid var(--gray-line);
 }
@@ -110,5 +110,8 @@
 
 .challengeActive footer button:hover{
     filter:brightness(0.9);
+}
 
+.challengeBoxContainer div .darkTheme{
+    color: #d3dbdf;
 }
