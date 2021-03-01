@@ -16,10 +16,11 @@ export function Countdown () {
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
 
     const {isDark} = useContext(DarkThemeContext)
+    const dark = isDark ? styles.darkTheme : '';
 
     return (
         <div>
-            <div className={ `${styles.countdownContainer} ${isDark}`}>
+            <div className={ `${styles.countdownContainer} ${dark}`}>
                 <div>
                     <span>{minuteLeft}</span>
                     <span>{minuteRight}</span>
@@ -34,7 +35,7 @@ export function Countdown () {
             { hasFinished ? (
                 <button
                     disabled
-                    className={ `${styles.countdownButton} ${isDark}`}
+                    className={ `${styles.countdownButton} ${dark}`}
             > 
                 Ciclo encerrado
                 <p>
@@ -46,7 +47,7 @@ export function Countdown () {
                     { isActive ? (
                     <button 
                         type="button" 
-                        className={`${styles.countdownButton} ${styles.countdownButtonActive} ${isDark}`}
+                        className={`${styles.countdownButton} ${styles.countdownButtonActive} ${dark}`}
                         onClick={resetCountdown}
                     >
                         Abandonar ciclo
@@ -55,7 +56,7 @@ export function Countdown () {
                     ) : (
                     <button 
                         type="button"
-                        className={`${styles.countdownButton} ${isDark}`}
+                        className={`${styles.countdownButton} ${dark}`}
                         onClick={startCountdown}
                     >
                         Iniciar ciclo

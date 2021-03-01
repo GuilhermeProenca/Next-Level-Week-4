@@ -9,11 +9,13 @@ export function LevelUpModal() {
 
     const {isDark} = useContext(DarkThemeContext)
 
+    const dark = isDark ? styles.darkTheme : '';
+
     new Audio('/som-level-up.wav').play();
 
     return (
-        <div className={styles.overlay}>
-            <div className={ `${styles.container} ${isDark}`}> 
+        <div className={`${styles.overlay} ${dark}`}>
+            <div className={ `${styles.container} ${dark}`}>  
                 <header> { level } </header>
 
                 <strong> Parabéns! 🥳 </strong>

@@ -37,10 +37,6 @@
     align-content: center;
 }
 
-.containerDark div {
-    background-color: #303233;
-}
-
 .containerDark span {
     color: #d3dbdf;;
 }

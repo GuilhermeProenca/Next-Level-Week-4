@@ -115,3 +115,7 @@
 .challengeBoxContainer div .darkTheme{
     color: #d3dbdf;
 }
+
+.challengeBoxContainer.darkTheme {
+    background-color: #303233;
+}

@@ -47,7 +47,7 @@
     justify-content: center;
 
     border-color: 2px solid rgb(33, 33, 33);
-    border-bottom: none;
+    border: solid 1px black;
 
     border-radius: 5px;
 
@@ -58,6 +58,11 @@
     font-weight: 600;
 
     transition: background-color 0.2s;
+    border-bottom: solid 7px var(--green);
+}
+
+.countdownButton.darkTheme{
+    border: solid 1px #fff;
     border-bottom: solid 7px var(--green);
 }
 
@@ -84,4 +89,8 @@
 .countdownButton .Check{
     margin-left: 10px;
    height: 1.3rem;
+}
+
+.countdownContainer.darkTheme > div {
+    background: #303233;
 }

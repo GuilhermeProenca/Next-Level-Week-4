@@ -9,7 +9,9 @@ import styles from '../styles/components/ChallengeBox.module.css'
 export function ChallengeBox(){
     const {activeChallenge, resetChallenge, completedChallenge} = useContext(ChallengesContext);
     const { resetCountdown } = useContext(CountdownContext);
+    
     const {isDark} = useContext(DarkThemeContext)
+    const dark = isDark ? styles.darkTheme : '';
 
     function handleChallengeSucceeded(){
         completedChallenge();
@@ -22,9 +24,9 @@ export function ChallengeBox(){
     }
 
     return(
-        <div className={ `${styles.challengeBoxContainer} ${isDark}` }>
+        <div className={ `${styles.challengeBoxContainer} ${dark}` }>
             {activeChallenge ? (
-                <div className={ `${styles.challengeActive} ${isDark}`} >
+                <div className={ `${styles.challengeActive} ${dark}`} >
 
                     <header>Ganhe {activeChallenge.amount} XP</header>
 
@@ -52,7 +54,7 @@ export function ChallengeBox(){
                     </footer>
                 </div>
             ) : (
-            <div className={ `${styles.challengeNoActive} ${isDark}`}>
+            <div className={ `${styles.challengeNoActive} ${dark}`}>
                 <strong className={isDark && styles.darkTheme}>Finalize o ciclo para receber um desafio</strong>
                 <p>
                     <img src="icons/level-up.svg" alt="Level up"/>

@@ -49,3 +49,20 @@
     border: 0;
     font-size: 0;
   }
+
+.overlay.darkTheme {
+    background: rgba(42, 43, 45, 0.8);
+}
+
+.container.darkTheme {
+    background: #303233;
+    box-shadow: 0 0 60px var(--dark-shadow);
+}
+
+.container.darkTheme strong {
+    color: #d3dbdf;
+}
+
+.container.darkTheme p {
+    color:#d3dbdf;
+}
