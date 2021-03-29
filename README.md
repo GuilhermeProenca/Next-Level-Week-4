@@ -1,5 +1,14 @@
+<h2 id="tecno"> 🛠 Technologies </h2>
 
-## Required! Install git, node and yarn (or npm).
+- JavaScript
+- ReactJS
+- TypeScript
+- NextJS
+- NodeJS
+- Yarn or Npm
+- Visual Studio Code
+
+## Required! Install git, node and yarn (or npm)
 ```
 # Clone Repository
 $ git clone https://github.com/GuilhermeProenca/Next-Level-Week-4.git
@@ -13,7 +22,7 @@ $ yarn
 # Run Aplication
 $ yarn dev
 
-## Access localhost
+# Access localhost
 http://localhost:3000
 ```
 # Light Mode
